@@ -44,7 +44,7 @@ const BoxGenerator = (props) => {
                                 height: `${e.target.value}px`,
                             })
                         }}/>
-                        <button type="submit">Add</button>
+                        <button type="submit" className="btn btn-success mx-4">Add</button>
                     </form>
                 </div>
             </div>
