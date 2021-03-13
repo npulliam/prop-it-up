@@ -39,7 +39,7 @@ const HookForm = props => {
     }
 
     const handleConfirmPw = (e) => {
-        setConfirmPw(e.target.value); 
+        setConfirmPw(e.target.value);
         if (e.target.value !== password) {  // did not work with confirmPw in the condition
             setConfirmPwErr("Passwords must match")
         } else {
@@ -80,7 +80,7 @@ const HookForm = props => {
                                 <p className="text-danger form-control">  </p>
                         }
                         <label>Confirm Password:</label>
-                        <input className="form-control" type="password" onChange={handleConfirmPw}/>
+                        <input className="form-control" type="password" onChange={handleConfirmPw} value={confirmPw}/>
                         { 
                             confirmPwErr ?
                                 <p className="text-danger form-control">{ confirmPwErr }</p> :
@@ -91,6 +91,7 @@ const HookForm = props => {
                     <p>Last Name: {lastName}</p>
                     <p>Email: {email}</p>
                     <p>Password: {password}</p>
+                    <p>Confirm Password: {confirmPw}</p>
             </div>
         </div>
     )
