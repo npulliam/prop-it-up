@@ -1,21 +1,27 @@
 import './App.css';
 import Tabs from './components/Tabs';
+import ToDo from './components/ToDo';
+import TaskForm from './components/TaskForm';
 import React, { useState } from 'react';
 
 
 function App() {
-  const [boxes, setBoxes] = useState([]);
-  const tabsProps = {
-    tabs: [{label: "Tab 1", content: "This is tab 1 content"}, {label: "Tab 2", content: "This is tab 2 content"}, {label: "Tab 3", content: "This is tab 3 content"}]
-  }
+
+  const [tasks, setTasks] = useState([
+    {text: "Get Python Red Belt", completed: false},
+    {text: "Get Python Black Belt", completed: true},
+    {text: "Get MERN Red Belt", completed: false},
+    {text: "Get MERN Black Belt", completed: false}
+  ]);
   
-  const addBox = ( newBox ) => {
-    setBoxes([...boxes, newBox]);
+  const addTask = ( newTask ) => {
+    setTasks([...tasks, newTask]);
   }
 
   return (
     <div className="App">
-      <Tabs tabs={tabsProps.tabs}/>
+      <TaskForm onNewTask={ addTask }/>
+      <ToDo tasks={ tasks }/>
     </div>
     
   );
