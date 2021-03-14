@@ -8,10 +8,11 @@ import React, { useState } from 'react';
 function App() {
 
   const [tasks, setTasks] = useState([
-    {text: "Get Python Red Belt", completed: false},
+    {text: "Get Python Red Belt", completed: true},
     {text: "Get Python Black Belt", completed: true},
-    {text: "Get MERN Red Belt", completed: false},
-    {text: "Get MERN Black Belt", completed: false}
+    {text: "Get MERN Black Belt", completed: false},
+    {text: "Turn into checklist", completed: false},
+    {text: "Add remove button", completed: false}
   ]);
   
   const addTask = ( newTask ) => {

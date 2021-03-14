@@ -8,7 +8,8 @@ const TaskForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        props.onNewTask(newTask);
+        e.target.children[1].value = "";
     };
 
     const updateTask = (e) => {
