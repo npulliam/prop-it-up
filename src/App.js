@@ -1,12 +1,19 @@
 import './App.css';
-import AxiosPoke from './components/AxiosPoke'
+import { Router } from '@reach/router';
+import Home from './views/Home';
+import Number from './views/Number';
+import WordStyles from './views/WordStyles';
 import React, { useState, useEffect } from 'react';
 
 
 function App() {
   return(
     <div className="container">
-      <AxiosPoke/>
+       <Router>
+            <Home path="/home"/>
+            <Number path="/:num"/>
+            <WordStyles path="/:word/:color/:background"/>
+        </Router>
     </div>
   )
 }
