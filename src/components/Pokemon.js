@@ -18,12 +18,20 @@ const Pokemon = (props) => {
   
 
   return (
-        <div className="col text-center">
+      <div className="container">
+        <div className="row">
           <button className="btn btn-dark" onClick={getPokemon}>Fetch</button>
-          <ul>
-            {pokeList}
-          </ul>
         </div>
+        <div className="row">
+
+        </div>
+          <div className="col text-center">
+            <ul>
+            {pokeList}
+        </ul>
+        </div>
+        
+      </div>
   );
 }
 

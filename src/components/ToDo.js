@@ -17,7 +17,7 @@ const ToDo = (props) => {
         return(
             <div key={i} className="d-flex">{
                 task.completed ?
-                <p className="test"><del>{task.text}</del></p> :
+                <p className="test strike"><del>{task.text}</del></p> :
                 <p>{task.text}</p>
             }       
                 <input type="checkbox" className="form-check-input mx-3" checked={task.completed} onChange={ (e) => toggleComplete(i)}/>
