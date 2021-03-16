@@ -3,7 +3,7 @@ import { Router } from '@reach/router';
 import Home from './views/Home';
 import Number from './views/Number';
 import WordStyles from './views/WordStyles';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 
 function App() {
